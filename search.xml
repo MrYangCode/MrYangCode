@@ -1,21 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2021/05/12/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
+    <title>command</title>
+    <url>/2021/05/13/command/</url>
+    <content><![CDATA[<h3 id="一、查看-ls"><a href="#一、查看-ls" class="headerlink" title="一、查看 ls"></a>一、查看 ls</h3><h4 id="ls命令选项"><a href="#ls命令选项" class="headerlink" title="ls命令选项"></a>ls命令选项</h4><pre><code>-a 列出目录下的所有文件，包含.开头的隐藏文件
+-l 列出文件的详细信息
+-i 查看文件的iNode号（iNode会指向文件块所在的位置）
+-h 以容易读取的方式显示文件大小
+-d 仅列出目录本身，而不显示目录中的文件
+-t 按照时间顺序排序，时间越早越早下面
+</code></pre>
+<h3 id="二、创建目录-mkdir"><a href="#二、创建目录-mkdir" class="headerlink" title="二、创建目录 mkdir"></a>二、创建目录 mkdir</h3><h4 id="常用参数"><a href="#常用参数" class="headerlink" title="常用参数"></a>常用参数</h4><pre><code>-p 创建多级目录（跨级创建）
+-v 查看目录创建的过程（创建目录可视化）
+</code></pre>
+<h3 id="三、删除文件-rmdir"><a href="#三、删除文件-rmdir" class="headerlink" title="三、删除文件 rmdir"></a>三、删除文件 rmdir</h3><h3 id="四、创建文件-touch"><a href="#四、创建文件-touch" class="headerlink" title="四、创建文件 touch"></a>四、创建文件 touch</h3><h3 id="五、删除文件或目录-rm"><a href="#五、删除文件或目录-rm" class="headerlink" title="五、删除文件或目录 rm"></a>五、删除文件或目录 rm</h3><h4 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h4><pre><code>rm 文件名（删除时会询问是否删除）
+rm -f 文件名（强制删除）
+rm -v 文件名（可视化删除）
+</code></pre>
+<h4 id="删除目录"><a href="#删除目录" class="headerlink" title="删除目录"></a>删除目录</h4><pre><code>rm -r 目录名（删除时会询问是否删除）
+rm -rf 目录名（强制删除，若目录不存在，此命令依旧可以执行，不报错）
+rm -rv 目录名（可视化强制）
+</code></pre>
+<h3 id="六、复制文件或目录（可以对目标文件或目录重命名）-cp"><a href="#六、复制文件或目录（可以对目标文件或目录重命名）-cp" class="headerlink" title="六、复制文件或目录（可以对目标文件或目录重命名） cp"></a>六、复制文件或目录（可以对目标文件或目录重命名） cp</h3><h4 id="复制文件"><a href="#复制文件" class="headerlink" title="复制文件"></a>复制文件</h4><pre><code>格式：cp 源文件 目标文件
+</code></pre>
+<h4 id="拷贝目录（目录需要加-）注意区分绝对路径和相对路径"><a href="#拷贝目录（目录需要加-）注意区分绝对路径和相对路径" class="headerlink" title="拷贝目录（目录需要加/）注意区分绝对路径和相对路径"></a>拷贝目录（目录需要加/）注意区分绝对路径和相对路径</h4><pre><code>格式：cp -r 源目录 目标目录
+</code></pre>
+<h4 id="命令CP自带安全参数-i，如果不想被询问，则可以使用命令-user-bin-cp"><a href="#命令CP自带安全参数-i，如果不想被询问，则可以使用命令-user-bin-cp" class="headerlink" title="命令CP自带安全参数-i，如果不想被询问，则可以使用命令/user/bin/cp"></a>命令CP自带安全参数-i，如果不想被询问，则可以使用命令/user/bin/cp</h4><h3 id="七、查看文件内容cat-tac-more-less-head-tail"><a href="#七、查看文件内容cat-tac-more-less-head-tail" class="headerlink" title="七、查看文件内容cat tac more less head tail"></a>七、查看文件内容cat tac more less head tail</h3><h4 id=""><a href="#" class="headerlink" title=""></a></h4>]]></content>
+      <categories>
+        <category>linux命令</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>命令</tag>
+      </tags>
   </entry>
 </search>
